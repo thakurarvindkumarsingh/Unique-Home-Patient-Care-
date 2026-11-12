@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unique Home Patient Care Pvt. Ltd. | Professional Nursing & Caretaker at Home</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: { 50: '#f0fdf4', 100: '#dcfce7', 600: '#16a34a', 700: '#15803d', dark: '#064e3b' }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased relative" id="top">
+
+    <!-- Top Emergency Bar -->
+    <div class="bg-emerald-900 text-white text-xs py-2 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-4">
+                <span><i class="fa-solid fa-location-dot text-emerald-400"></i> Available for Home Care Services</span>
+                <span class="hidden md:inline"><i class="fa-solid fa-clock text-emerald-400"></i> 24/7 Emergency Support</span>
+            </div>
+            <div class="flex items-center gap-4 font-semibold">
+                <a href="tel:+918874154462" class="hover:text-emerald-300 flex items-center gap-1">
+                    <i class="fa-solid fa-phone"></i> +91-8874154462
+                </a>
+                <span>|</span>
+                <a href="tel:+919580325626" class="hover:text-emerald-300 flex items-center gap-1">
+                    <i class="fa-solid fa-phone"></i> +91-9580325626
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sticky Navbar -->
+    <nav class="bg-white shadow-md sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 py-3.5 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-2 text-xl font-bold text-emerald-800">
+                <div class="w-10 h-10 bg-emerald-100 rounded-xl flex items-center justify-center text-emerald-600 text-lg">
+                    <i class="fa-solid fa-house-medical"></i>
+                </div>
+                <div>
+                    <span class="block leading-none">Unique Home</span>
+                    <span class="text-xs text-slate-500 font-normal tracking-wider">PATIENT CARE PVT. LTD.</span>
+                </div>
+            </a>
+            <div class="hidden lg:flex items-center gap-8 font-medium text-slate-600 text-sm">
+                <a href="#services" class="hover:text-emerald-600 transition">Services</a>
+                <a href="#gallery" class="hover:text-emerald-600 transition">Gallery</a>
+                <a href="#about" class="hover:text-emerald-600 transition">About Us</a>
+                <a href="#team" class="hover:text-emerald-600 transition">Medical Team</a>
+                <a href="#contact" class="hover:text-emerald-600 transition">Contact</a>
+            </div>
+            <div class="flex items-center gap-3">
+                <button onclick="openModal('Emergency Care')" class="bg-red-600 hover:bg-red-700 text-white text-xs sm:text-sm px-4 py-2.5 rounded-xl font-semibold shadow-sm transition flex items-center gap-2 animate-pulse">
+                    <i class="fa-solid fa-triangle-exclamation"></i> Emergency Care
+                </button>
+                <a href="tel:+918874154462" class="hidden sm:flex bg-emerald-600 hover:bg-emerald-700 text-white text-sm px-4 py-2.5 rounded-xl font-semibold transition items-center gap-2">
+                    <i class="fa-solid fa-phone"></i> Call Now
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Banner Image at Top (Right below Navbar) -->
+    <header class="relative bg-gradient-to-b from-emerald-50 via-white to-slate-50 py-12 lg:py-16 px-4 overflow-hidden">
+        <div class="max-w-7xl mx-auto space-y-8">
+            
+            <!-- Banner Image Right at the Top -->
+            <div class="rounded-3xl overflow-hidden shadow-lg border border-emerald-100 h-64 sm:h-80 w-full relative">
+                <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1400&q=80" alt="Home Patient Care Banner" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-emerald-950/80 via-transparent flex items-end p-6 sm:p-10">
+                    <div>
+                        <span class="bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-2 inline-block">24/7 Professional Support</span>
+                        <h2 class="text-white text-xl sm:text-3xl font-extrabold">Dedicated medical professionals bringing comfort and healing to your home.</h2>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Hero Grid (Text & Quick Form) -->
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <div class="inline-flex items-center gap-2 bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">
+                        <i class="fa-solid fa-shield-heart"></i> Trusted Healthcare Team
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight">
+                        Professional Health & Patient Care <span class="text-emerald-600">At Your Home</span>
+                    </h1>
+                    <p class="text-slate-600 text-lg leading-relaxed">
+                        Experience peace of mind with our expert nurses, trained caretakers, physiotherapists, and home ICU setups delivered right to your doorstep.
+                    </p>
+                    <div class="flex flex-wrap gap-4 pt-2">
+                        <button onclick="openModal('General Care Service')" class="bg-emerald-600 hover:bg-emerald-700 text-white px-7 py-3.5 rounded-xl font-semibold shadow-lg shadow-emerald-600/20 transition flex items-center gap-2">
+                            <i class="fa-solid fa-calendar-check"></i> Book Care Service
+                        </button>
+                        <a href="https://wa.me/918874154462?text=Hello,%20I%20want%20to%20inquire%20about%20Home%20Patient%20Care%20services." target="_blank" class="bg-white hover:bg-slate-100 text-emerald-700 border border-emerald-300 px-7 py-3.5 rounded-xl font-semibold transition flex items-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-green-600 text-xl"></i> Chat on WhatsApp
+                        </a>
+                    </div>
+                    <!-- Stats Row -->
+                    <div class="grid grid-cols-3 gap-4 pt-8 border-t border-slate-200">
+                        <div>
+                            <div class="text-2xl lg:text-3xl font-extrabold text-slate-900">2,500+</div>
+                            <div class="text-xs text-slate-500 font-medium">Total Clients</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl lg:text-3xl font-extrabold text-slate-900">21+</div>
+                            <div class="text-xs text-slate-500 font-medium">Specialized Services</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl lg:text-3xl font-extrabold text-slate-900">534+</div>
+                            <div class="text-xs text-slate-500 font-medium">Trained Team</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Booking Form -->
+                <div class="bg-white p-6 sm:p-8 rounded-3xl shadow-xl border border-emerald-100 relative">
+                    <div class="absolute -top-3 right-6 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Fast Response</div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-1">Request Instant Service</h3>
+                    <p class="text-slate-500 text-xs mb-6">Fill details and choose your preferred contact method.</p>
+                    <form id="heroForm" onsubmit="submitHeroForm(event)" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-600 mb-1">Patient / Your Name</label>
+                            <input type="text" id="hName" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 text-sm" placeholder="Enter full name">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-600 mb-1">Phone Number</label>
+                            <input type="tel" id="hPhone" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 text-sm" placeholder="10-digit mobile number">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-600 mb-1">Select Required Service</label>
+                            <select id="hService" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 text-sm bg-white">
+                                <option>Attendant Care at Home</option>
+                                <option>Fully Trained Nurse Care</option>
+                                <option>Semi-Nurse Care</option>
+                                <option>Emergency Care at Home</option>
+                                <option>Doctor Visit at Home</option>
+                                <option>ICU Setup at Home</option>
+                            </select>
+                        </div>
+                        <!-- Send Method Radio Options placed right below Service dropdown -->
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-600 mb-2">Send Request Via:</label>
+                            <div class="grid grid-cols-2 gap-3">
+                                <label class="flex items-center gap-2 p-3 rounded-xl border border-slate-200 cursor-pointer hover:bg-slate-50 text-xs font-medium">
+                                    <input type="radio" name="sendMethod" value="whatsapp" checked class="text-emerald-600 focus:ring-emerald-500">
+                                    <i class="fa-brands fa-whatsapp text-green-600 text-base"></i> WhatsApp
+                                </label>
+                                <label class="flex items-center gap-2 p-3 rounded-xl border border-slate-200 cursor-pointer hover:bg-slate-50 text-xs font-medium">
+                                    <input type="radio" name="sendMethod" value="email" class="text-emerald-600 focus:ring-emerald-500">
+                                    <i class="fa-solid fa-envelope text-blue-600 text-base"></i> Email (Gmail)
+                                </label>
+                            </div>
+                        </div>
+                        <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3.5 rounded-xl transition shadow-md text-sm flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-paper-plane"></i> Submit Request Now
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Section with Cards having Images -->
+    <section id="services" class="py-20 px-4 max-w-7xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <span class="text-emerald-600 font-semibold text-sm uppercase tracking-wider">Professional Health Care Services</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2 mb-4">Our Specialized Medical Support</h2>
+            <p class="text-slate-600">Comprehensive medical support and personal care delivered by certified professionals in your home environment.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Service 1 -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition overflow-hidden flex flex-col justify-between">
+                <div>
+                    <div class="h-48 w-full overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=600&q=80" alt="Attendant Care" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Attendant Care</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">Professional support designed to enhance daily living, hygiene, feeding, and personal companionship.</p>
+                        <ul class="space-y-2 text-xs text-slate-600 mb-6">
+                            <li><i class="fa-solid fa-check text-emerald-600 mr-2"></i> Changing diapers & bathing assistance</li>
+                            <li><i class="fa-solid fa-check text-emerald-600 mr-2"></i> Timely food & medicine administration</li>
+                            <li><i class="fa-solid fa-check text-emerald-600 mr-2"></i> Mobility & washroom assistance</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <button onclick="openModal('Attendant Care')" class="w-full bg-emerald-50 hover:bg-emerald-600 hover:text-white text-emerald-700 py-2.5 rounded-xl font-semibold text-sm transition">
+                        Enquire Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition overflow-hidden flex flex-col justify-between">
+                <div>
+                    <div class="h-48 w-full overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=600&q=80" alt="Semi-Nurse Care" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Semi-Nurse Care</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">Intermediate medical procedures, device assistance, and compassionate professional companionship.</p>
+                        <ul class="space-y-2 text-xs text-slate-600 mb-6">
+                            <li><i class="fa-solid fa-check text-emerald-600 mr-2"></i> Checking vitals (BP, Sugar, SpO2)</li>
+                            <li><i class="fa-solid fa-check text-emerald-600 mr-2"></i> Insulin shots & Ryle's tube feeding</li>
+                            <li><i class="fa-solid fa-check text-emerald-600 mr-2"></i> Nebulizer, Oxygen & BiPAP support</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <button onclick="openModal('Semi-Nurse Care')" class="w-full bg-emerald-50 hover:bg-emerald-600 hover:text-white text-emerald-700 py-2.5 rounded-xl font-semibold text-sm transition">
+                        Enquire Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition overflow-hidden flex flex-col justify-between">
+                <div>
+                    <div class="h-48 w-full overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80" alt="Fully Trained Nurse" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Fully Trained Nurse</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">Expert medical support, complex device management, and critical care nursing at home.</p>
+                        <ul class="space-y-2 text-xs text-slate-600 mb-6">
+                            <li><i class="fa-solid fa-check text-emerald-600 mr-2"></i> IV/IM Injections & Infusions</li>
+                            <li><i class="fa-solid fa-check text-emerald-600 mr-2"></i> Tracheostomy & Colostomy care</li>
+                            <li><i class="fa-solid fa-check text-emerald-600 mr-2"></i> Home ICU setup management</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <button onclick="openModal('Fully Trained Nurse')" class="w-full bg-emerald-50 hover:bg-emerald-600 hover:text-white text-emerald-700 py-2.5 rounded-xl font-semibold text-sm transition">
+                        Enquire Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition overflow-hidden flex flex-col justify-between">
+                <div>
+                    <div class="h-48 w-full overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=600&q=80" alt="Doctor Visit at Home" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Doctor Visit at Home</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">Experienced physicians available for thorough physical examinations, diagnosis, and prescription at home.</p>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <button onclick="openModal('Doctor Visit at Home')" class="w-full bg-emerald-50 hover:bg-emerald-600 hover:text-white text-emerald-700 py-2.5 rounded-xl font-semibold text-sm transition">
+                        Enquire Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Service 5 -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition overflow-hidden flex flex-col justify-between">
+                <div>
+                    <div class="h-48 w-full overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=600&q=80" alt="On-Call Injection & Dressing" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">On-Call Injection & Dressing</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">Precision medical treatments, wound dressings, and prescribed injections administered safely by trained nurses.</p>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <button onclick="openModal('On-Call Injection & Dressing')" class="w-full bg-emerald-50 hover:bg-emerald-600 hover:text-white text-emerald-700 py-2.5 rounded-xl font-semibold text-sm transition">
+                        Enquire Now
+                    </button>
+                </div>
+            </div>
+            
+            <!---6--->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition overflow-hidden flex flex-col justify-between">
+                <div>
+                    <div class="h-48 w-full overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=600&q=80" alt="Ambulance Service" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Ambulance & Emergency Care</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">Reliable emergency response, rapid medical assistance, and safe transit when every second counts.</p>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <button onclick="openModal('Ambulance Service')" class="w-full bg-emerald-50 hover:bg-emerald-600 hover:text-white text-emerald-700 py-2.5 rounded-xl font-semibold text-sm transition">
+                        Enquire Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-slate-100 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-emerald-600 font-semibold text-sm uppercase tracking-wider">Visual Journey</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2 mb-4">Our Gallery & Care Moments</h2>
+                <p class="text-slate-600">A glimpse into our professional healthcare support and dedicated patient care services.</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="rounded-2xl overflow-hidden shadow-md h-64 bg-white group">
+                    <img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=600&q=80" alt="Nursing Care" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-md h-64 bg-white group">
+                    <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80" alt="Elderly Care" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-md h-64 bg-white group">
+                    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=600&q=80" alt="Medical Support" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Map Section -->
+    <section class="py-16 px-4 max-w-7xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <span class="text-emerald-600 font-semibold text-sm uppercase tracking-wider">Our Location</span>
+            <h2 class="text-3xl font-extrabold text-slate-900 mt-2 mb-2">Find Us On Google Map</h2>
+            <p class="text-slate-600 text-sm">T-2532 G.F, Gali No-21A Baljeet Nagar Near Vishk New Delhi Patel Nagar East Central Delhi</p>
+        </div>
+        <div class="rounded-3xl overflow-hidden shadow-lg border border-slate-200 h-96 w-full">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.879796853685!2d77.1610!3d28.6470!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDM4JzQ5LjIiTiA3N8KwMDknMzkuNiJF!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" 
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+    </section>
+
+    <!-- Doctor / Leadership Section -->
+    <section id="team" class="bg-emerald-900 text-white py-20 px-4">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="text-emerald-400 font-semibold text-sm uppercase tracking-wider">Expert Leadership</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold mt-2 mb-6">Committed to Healing with Compassion & Experience</h2>
+                <p class="text-slate-300 leading-relaxed mb-6">
+                    Under the visionary guidance of experienced medical professionals, Unique Home Patient Care ensures that every patient receives hospital-grade care and undivided attention in familiar surroundings.
+                </p>
+                <div class="flex items-center gap-4 bg-emerald-800/60 p-4 rounded-2xl border border-emerald-700">
+                    <div class="w-12 h-12 bg-emerald-600 rounded-xl flex items-center justify-center text-2xl font-bold">
+                        <i class="fa-solid fa-user-doctor"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg">Dr. Praduman Singh (MBBS)</h4>
+                        <p class="text-xs text-emerald-300">20+ Years of Experience in Medicine & Healthcare Delivery</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-emerald-800 p-8 rounded-3xl border border-emerald-700 space-y-6">
+                <h3 class="text-2xl font-bold">Directors & Coordinators</h3>
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center bg-emerald-900/50 p-4 rounded-xl">
+                        <div>
+                            <h4 class="font-bold">Vandana Pandey</h4>
+                            <p class="text-xs text-emerald-300">Director</p>
+                        </div>
+                        <a href="tel:+919580325626" class="bg-emerald-600 hover:bg-emerald-500 text-white text-xs px-4 py-2 rounded-lg font-semibold transition">
+                            <i class="fa-solid fa-phone mr-1"></i> Call
+                        </a>
+                    </div>
+                    <div class="flex justify-between items-center bg-emerald-900/50 p-4 rounded-xl">
+                        <div>
+                            <h4 class="font-bold">Shivam Shukla</h4>
+                            <p class="text-xs text-emerald-300">Coordinator</p>
+                        </div>
+                        <a href="tel:+918874154462" class="bg-emerald-600 hover:bg-emerald-500 text-white text-xs px-4 py-2 rounded-lg font-semibold transition">
+                            <i class="fa-solid fa-phone mr-1"></i> Call
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Links Section -->
+    <section class="py-16 bg-slate-900 text-white px-4 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto text-center space-y-6">
+            <h3 class="text-2xl font-bold">Connect With Us on Social Media</h3>
+            <p class="text-slate-400 text-sm max-w-xl mx-auto">Follow our official channels for health tips, updates, and patient care guidance.</p>
+            <div class="flex justify-center items-center gap-4 flex-wrap">
+                <a href="https://facebook.com" target="_blank" class="w-12 h-12 bg-slate-800 hover:bg-blue-600 rounded-xl flex items-center justify-center text-xl transition">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" class="w-12 h-12 bg-slate-800 hover:bg-pink-600 rounded-xl flex items-center justify-center text-xl transition">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://youtube.com" target="_blank" class="w-12 h-12 bg-slate-800 hover:bg-red-600 rounded-xl flex items-center justify-center text-xl transition">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+                <a href="https://wa.me/918874154462" target="_blank" class="w-12 h-12 bg-slate-800 hover:bg-green-600 rounded-xl flex items-center justify-center text-xl transition">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-slate-950 text-slate-400 py-12 px-4 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-8">
+            <div class="space-y-4">
+                <div class="text-white text-xl font-bold flex items-center gap-2">
+                    <i class="fa-solid fa-house-medical text-emerald-500"></i> Unique Home Patient Care
+                </div>
+                <p class="text-sm leading-relaxed">Your trusted partner in health and recovery. Professional healthcare services delivered with compassion at home.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4 text-sm uppercase tracking-wider">Quick Links</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#services" class="hover:text-white transition">Our Services</a></li>
+                    <li><a href="#gallery" class="hover:text-white transition">Gallery</a></li>
+                    <li><a href="#team" class="hover:text-white transition">Medical Team</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4 text-sm uppercase tracking-wider">Contact Numbers</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="tel:+918874154462" class="hover:text-white transition"><i class="fa-solid fa-phone mr-2 text-emerald-500"></i> +91-8874154462</a></li>
+                    <li><a href="tel:+919580325626" class="hover:text-white transition"><i class="fa-solid fa-phone mr-2 text-emerald-500"></i> +91-9580325626</a></li>
+                    <li><a href="mailto:uniquehomepatientcareprivateli@gmail.com" class="hover:text-white transition text-xs"><i class="fa-solid fa-envelope mr-2 text-emerald-500"></i> uniquehomepatientcareprivateli@gmail.com</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4 text-sm uppercase tracking-wider">Office Address</h4>
+                <p class="text-sm leading-relaxed">
+                    T-2532 G.F, Gali No-21A Baljeet Nagar Near Vishk New Delhi Patel Nagar East Central Delhi - 110008
+                </p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto pt-8 border-t border-slate-900 text-center text-xs">
+            Copyright © 2026 Unique Home Patient Care Pvt. Ltd. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Go to Top Button on Left Side -->
+    <div class="fixed bottom-6 left-6 z-40">
+        <a href="#top" class="w-12 h-12 bg-slate-800 hover:bg-slate-700 text-white rounded-full flex items-center justify-center shadow-lg text-lg transition" title="Go to Top">
+            <i class="fa-solid fa-arrow-up"></i>
+        </a>
+    </div>
+
+    <!-- Floating Action Buttons on Right Side -->
+    <div class="fixed bottom-6 right-6 flex flex-col gap-3 z-40">
+        <a href="https://wa.me/918874154462?text=Hello,%20I%20need%20urgent%20home%20patient%20care%20service." target="_blank" class="w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full flex items-center justify-center shadow-xl text-2xl transition transform hover:scale-105" title="Chat on WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="tel:+918874154462" class="w-14 h-14 bg-emerald-600 hover:bg-emerald-700 text-white rounded-full flex items-center justify-center shadow-xl text-xl transition transform hover:scale-105" title="Call Now">
+            <i class="fa-solid fa-phone"></i>
+        </a>
+    </div>
+
+    <!-- Interactive Booking Modal Popup -->
+    <div id="bookingModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 relative shadow-2xl">
+            <button onclick="closeModal()" class="absolute top-5 right-5 text-slate-400 hover:text-slate-700 w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h3 class="text-2xl font-bold text-slate-900 mb-1" id="modalTitle">Book Healthcare Service</h3>
+            <p class="text-slate-500 text-xs mb-6">Enter your details to instantly connect with our care coordinator.</p>
+            <form id="modalForm" onsubmit="submitModalForm(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-slate-600 mb-1">Your Name</label>
+                    <input type="text" id="mName" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 text-sm" placeholder="Enter your full name">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-slate-600 mb-1">Phone Number</label>
+                    <input type="tel" id="mPhone" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 text-sm" placeholder="10-digit mobile number">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-slate-600 mb-1">Service Required</label>
+                    <input type="text" id="mServiceInput" readonly class="w-full px-4 py-3 rounded-xl border border-slate-100 bg-slate-50 text-slate-700 text-sm font-semibold">
+                </div>
+                <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3.5 rounded-xl transition shadow-md text-sm flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> Send via WhatsApp
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript Handlers -->
+    <script>
+        const ownerWhatsApp = "918874154462";
+        const ownerEmail = "uniquehomepatientcareprivateli@gmail.com";
+
+        // Hero Section Form Handler with Auto-clear
+        function submitHeroForm(e) {
+            e.preventDefault();
+            const name = document.getElementById('hName').value;
+            const phone = document.getElementById('hPhone').value;
+            const service = document.getElementById('hService').value;
+            const sendMethod = document.querySelector('input[name="sendMethod"]:checked').value;
+
+            if (sendMethod === 'email') {
+                const subject = `New Patient Enquiry: ${service}`;
+                const body = `Name: ${name}%0D%0APhone: ${phone}%0D%0AService: ${service}`;
+                window.location.href = `mailto:${ownerEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            } else {
+                const msg = `*New Patient Enquiry*%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Service:* ${service}`;
+                window.open(`https://wa.me/${ownerWhatsApp}?text=${msg}`, '_blank');
+            }
+
+            // Clear form after submit
+            document.getElementById('heroForm').reset();
+        }
+
+        // Modal Functions
+        function openModal(serviceName) {
+            document.getElementById('mServiceInput').value = serviceName;
+            document.getElementById('bookingModal').classList.remove('hidden');
+            document.getElementById('bookingModal').classList.add('flex');
+        }
+
+        function closeModal() {
+            document.getElementById('bookingModal').classList.remove('flex');
+            document.getElementById('bookingModal').classList.add('hidden');
+        }
+
+        function submitModalForm(e) {
+            e.preventDefault();
+            const name = document.getElementById('mName').value;
+            const phone = document.getElementById('mPhone').value;
+            const service = document.getElementById('mServiceInput').value;
+
+            const msg = `*Instant Booking Enquiry*%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Service:* ${service}`;
+            window.open(`https://wa.me/${ownerWhatsApp}?text=${msg}`, '_blank');
+            
+            // Clear modal form and close modal
+            document.getElementById('modalForm').reset();
+            closeModal();
+        }
+    </script>
+</body>
+</html>
